@@ -11,7 +11,7 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
         image: DecorationImage(
             image: AssetImage(
               'assets/register.png',
@@ -24,7 +24,7 @@ class _LoginScreenState extends State<LoginScreen> {
           children: [
             Container(
               padding: EdgeInsets.only(left: 35, top: 150),
-              child: const Text(
+              child: Text(
                 "Wellcome\nBack",
                 style: TextStyle(
                   color: Colors.white,
@@ -48,7 +48,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(10))),
                     ),
-                    const SizedBox(
+                    SizedBox(
                       height: 30,
                     ),
                     TextField(
@@ -59,10 +59,10 @@ class _LoginScreenState extends State<LoginScreen> {
                           border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(10))),
                     ),
-                    const SizedBox(
+                    SizedBox(
                       height: 30,
                     ),
-                    const Row(
+                    Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
@@ -78,7 +78,8 @@ class _LoginScreenState extends State<LoginScreen> {
                           child: IconButton(
                             color: Colors.white,
                             onPressed: () {
-                              Navigator.pushNamed(context, 'signIn'); // Ensure the route is defined in your MaterialApp
+                              Navigator.pushNamed(context,
+                                  'signIn'); // Ensure the route is defined in your MaterialApp
                             },
                             icon: Icon(Icons.arrow_forward),
                           ),

@@ -11,7 +11,7 @@ class _SingInState extends State<SingIn> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
         image: DecorationImage(
             image: AssetImage(
               'assets/login.png',
@@ -24,7 +24,7 @@ class _SingInState extends State<SingIn> {
           children: [
             Container(
               padding: EdgeInsets.only(left: 35, top: 150),
-              child: const Text(
+              child: Text(
                 "Wellcome\nBack",
                 style: TextStyle(
                   color: Colors.white,
@@ -48,7 +48,7 @@ class _SingInState extends State<SingIn> {
                           border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(10))),
                     ),
-                    const SizedBox(
+                    SizedBox(
                       height: 30,
                     ),
                     TextField(
@@ -59,10 +59,10 @@ class _SingInState extends State<SingIn> {
                           border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(10))),
                     ),
-                    const SizedBox(
+                    SizedBox(
                       height: 30,
                     ),
-                    const Row(
+                    Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
@@ -82,7 +82,7 @@ class _SingInState extends State<SingIn> {
                         ),
                       ],
                     ),
-                    const SizedBox(
+                    SizedBox(
                       height: 30,
                     ),
                     Row(
