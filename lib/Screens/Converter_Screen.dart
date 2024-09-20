@@ -133,12 +133,10 @@ class ConverterScreen extends StatefulWidget {
 }
 
 class _ConverterScreenState extends State<ConverterScreen> {
+  int myIndex = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Converter Page"),
-      ),
       body: Padding(
         padding: const EdgeInsets.all(8.0), // Minimal padding for screen edges
         child: Column(
@@ -173,7 +171,24 @@ class _ConverterScreenState extends State<ConverterScreen> {
                   ),
                 ),
                 OutlinedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    showModalBottomSheet(
+                      context: context,
+                      builder: (BuildContext context) {
+                        return SizedBox(
+                          height: 400,
+                          child: Center(
+                            child: ElevatedButton(
+                              onPressed: () {
+                                Navigator.pop(context);
+                              },
+                              child: Text("close"),
+                            ),
+                          ),
+                        );
+                      },
+                    );
+                  },
                   child: Row(
                     children: [
                       Text("Select Currency"),
@@ -197,7 +212,24 @@ class _ConverterScreenState extends State<ConverterScreen> {
                   ),
                 ),
                 OutlinedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    showModalBottomSheet(
+                      context: context,
+                      builder: (BuildContext context) {
+                        return SizedBox(
+                          height: 400,
+                          child: Center(
+                            child: ElevatedButton(
+                              onPressed: () {
+                                Navigator.pop(context);
+                              },
+                              child: Text("close"),
+                            ),
+                          ),
+                        );
+                      },
+                    );
+                  },
                   child: Row(
                     children: [
                       Text("Select Currency"),
