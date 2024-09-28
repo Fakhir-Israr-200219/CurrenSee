@@ -123,6 +123,7 @@
 //   }
 // }
 
+import 'package:currency_converter_app/Screens/CurrencyList.dart';
 import 'package:flutter/material.dart';
 
 class ConverterScreen extends StatefulWidget {
@@ -138,7 +139,7 @@ class _ConverterScreenState extends State<ConverterScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.all(8.0), // Minimal padding for screen edges
+        padding: EdgeInsets.all(8.0), // Minimal padding for screen edges
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -182,7 +183,7 @@ class _ConverterScreenState extends State<ConverterScreen> {
                               onPressed: () {
                                 Navigator.pop(context);
                               },
-                              child: Text("close"),
+                              child: CurrencyList(),
                             ),
                           ),
                         );
@@ -223,7 +224,7 @@ class _ConverterScreenState extends State<ConverterScreen> {
                               onPressed: () {
                                 Navigator.pop(context);
                               },
-                              child: Text("close"),
+                              child: CurrencyList(),
                             ),
                           ),
                         );

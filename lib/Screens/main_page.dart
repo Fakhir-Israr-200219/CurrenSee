@@ -14,7 +14,7 @@ class MainPage extends StatefulWidget {
 class _MainPageState extends State<MainPage> {
   final List<Widget> pages = [
     const ConverterScreen(),
-    const CurrencyList(),
+    CurrencyList(),
     const LoginScreen(),
     const SingIn(),
   ];
