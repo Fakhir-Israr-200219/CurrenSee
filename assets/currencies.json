@@ -1,0 +1,207 @@
+[
+    {
+      "name": "US Dollar",
+      "rate": 1.0,
+      "lastChangeRate": 0.02,
+      "lastChangeDate": "2024-09-27"
+    },
+    {
+      "name": "INR",
+      "rate": 75.0,
+      "lastChangeRate": 0.01,
+      "lastChangeDate": "2024-09-26"
+    },
+    {
+      "name": "PKR",
+      "rate": 250.0,
+      "lastChangeRate": -0.02,
+      "lastChangeDate": "2024-09-25"
+    },
+    {
+      "name": "TAKKA",
+      "rate": 87.0,
+      "lastChangeRate": 0.00,
+      "lastChangeDate": "2024-09-24"
+    },
+    {
+      "name": "EUR",
+      "rate": 0.85,
+      "lastChangeRate": 0.03,
+      "lastChangeDate": "2024-09-26"
+    },
+    {
+      "name": "YEN",
+      "rate": 110.0,
+      "lastChangeRate": -0.01,
+      "lastChangeDate": "2024-09-23"
+    },
+    {
+      "name": "RYAL",
+      "rate": 3.75,
+      "lastChangeRate": 0.00,
+      "lastChangeDate": "2024-09-22"
+    },
+    {
+      "name": "Peso",
+      "rate": 20.0,
+      "lastChangeRate": 0.02,
+      "lastChangeDate": "2024-09-21"
+    },
+    {
+      "name": "Dirham",
+      "rate": 3.67,
+      "lastChangeRate": 0.00,
+      "lastChangeDate": "2024-09-20"
+    },
+    {
+      "name": "Ruble",
+      "rate": 70.0,
+      "lastChangeRate": -0.03,
+      "lastChangeDate": "2024-09-19"
+    },
+    {
+      "name": "Australian Dollar",
+      "rate": 1.35,
+      "lastChangeRate": 0.01,
+      "lastChangeDate": "2024-09-26"
+    },
+    {
+      "name": "Canadian Dollar",
+      "rate": 1.25,
+      "lastChangeRate": 0.02,
+      "lastChangeDate": "2024-09-25"
+    },
+    {
+      "name": "Swiss Franc",
+      "rate": 0.93,
+      "lastChangeRate": 0.01,
+      "lastChangeDate": "2024-09-24"
+    },
+    {
+      "name": "Singapore Dollar",
+      "rate": 1.36,
+      "lastChangeRate": 0.01,
+      "lastChangeDate": "2024-09-23"
+    },
+    {
+      "name": "New Zealand Dollar",
+      "rate": 1.4,
+      "lastChangeRate": 0.01,
+      "lastChangeDate": "2024-09-22"
+    },
+    {
+      "name": "Hong Kong Dollar",
+      "rate": 7.85,
+      "lastChangeRate": 0.00,
+      "lastChangeDate": "2024-09-21"
+    },
+    {
+      "name": "Malaysian Ringgit",
+      "rate": 4.22,
+      "lastChangeRate": 0.01,
+      "lastChangeDate": "2024-09-20"
+    },
+    {
+      "name": "Thai Baht",
+      "rate": 34.0,
+      "lastChangeRate": 0.02,
+      "lastChangeDate": "2024-09-19"
+    },
+    {
+      "name": "Indonesian Rupiah",
+      "rate": 14000.0,
+      "lastChangeRate": 0.00,
+      "lastChangeDate": "2024-09-18"
+    },
+    {
+      "name": "Philippine Peso",
+      "rate": 50.0,
+      "lastChangeRate": 0.01,
+      "lastChangeDate": "2024-09-17"
+    },
+    {
+      "name": "Vietnamese Dong",
+      "rate": 23000.0,
+      "lastChangeRate": 0.00,
+      "lastChangeDate": "2024-09-16"
+    },
+    {
+      "name": "Pakistani Rupee",
+      "rate": 250.0,
+      "lastChangeRate": 0.01,
+      "lastChangeDate": "2024-09-15"
+    },
+    {
+      "name": "Bangladeshi Taka",
+      "rate": 87.0,
+      "lastChangeRate": 0.00,
+      "lastChangeDate": "2024-09-14"
+    },
+    {
+      "name": "UAE Dirham",
+      "rate": 3.67,
+      "lastChangeRate": 0.01,
+      "lastChangeDate": "2024-09-13"
+    },
+    {
+      "name": "Qatari Rial",
+      "rate": 3.64,
+      "lastChangeRate": 0.00,
+      "lastChangeDate": "2024-09-12"
+    },
+    {
+      "name": "Kuwaiti Dinar",
+      "rate": 0.31,
+      "lastChangeRate": 0.01,
+      "lastChangeDate": "2024-09-11"
+    },
+    {
+      "name": "Omani Rial",
+      "rate": 0.38,
+      "lastChangeRate": 0.00,
+      "lastChangeDate": "2024-09-10"
+    },
+    {
+      "name": "Jordanian Dinar",
+      "rate": 0.71,
+      "lastChangeRate": 0.01,
+      "lastChangeDate": "2024-09-09"
+    },
+    {
+      "name": "Lebanese Pound",
+      "rate": 15000.0,
+      "lastChangeRate": 0.00,
+      "lastChangeDate": "2024-09-08"
+    },
+    {
+      "name": "Israeli Shekel",
+      "rate": 3.25,
+      "lastChangeRate": 0.01,
+      "lastChangeDate": "2024-09-07"
+    },
+    {
+      "name": "South African Rand",
+      "rate": 15.0,
+      "lastChangeRate": 0.02,
+      "lastChangeDate": "2024-09-06"
+    },
+    {
+      "name": "Nigerian Naira",
+      "rate": 410.0,
+      "lastChangeRate": 0.00,
+      "lastChangeDate": "2024-09-05"
+    },
+    {
+      "name": "Mexican Peso",
+      "rate": 20.0,
+      "lastChangeRate": 0.01,
+      "lastChangeDate": "2024-09-04"
+    },
+    {
+      "name": "Brazilian Real",
+      "rate": 5.25,
+      "lastChangeRate": 0.00,
+      "lastChangeDate": "2024-09-03"
+    }
+  ]
+  

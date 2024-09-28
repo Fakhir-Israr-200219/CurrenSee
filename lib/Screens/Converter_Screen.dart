@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:currency_converter_app/Screens/CurrencyList.dart';
+import 'dart:convert';
+import 'package:flutter/services.dart';
 
 class ConverterScreen extends StatefulWidget {
   const ConverterScreen({super.key});
@@ -17,43 +19,34 @@ class _ConverterScreenState extends State<ConverterScreen> {
   final TextEditingController _convertedAmountController =
       TextEditingController();
 
-  // Conversion rates as a nested map
-  final Map<String, Map<String, double>> conversionRates = {
-    "USD": {
-      "INR": 75.0,
-      "PKR": 250.0,
-      "TAKKA": 80.0,
-      "EUR": 0.85,
-      "YEN": 110.0,
-      "RYAL": 3.75,
-      "Peso": 20.0,
-      "Dirham": 3.67,
-      "Ruble": 74.0
-    },
-    "INR": {
-      "USD": 0.013,
-      "PKR": 3.5,
-      "TAKKA": 1.06,
-      "EUR": 0.011,
-      "YEN": 1.47,
-      "RYAL": 0.05,
-      "Peso": 0.27,
-      "Dirham": 0.049,
-      "Ruble": 0.98
-    },
-    "PKR": {
-      "USD": 0.004,
-      "INR": 0.29,
-      "TAKKA": 0.30,
-      "EUR": 0.0034,
-      "YEN": 0.58,
-      "RYAL": 0.015,
-      "Peso": 0.12,
-      "Dirham": 0.014,
-      "Ruble": 0.26
-    },
-    // Add other currency conversions here
-  };
+  // Conversion rates as a map
+  Map<String, double> conversionRates = {};
+
+  @override
+  void initState() {
+    super.initState();
+    _loadCurrencyData(); // Load currency data on initialization
+  }
+
+  Future<void> _loadCurrencyData() async {
+    // Load the JSON data
+    final String response =
+        await rootBundle.loadString('assets/currencies.json');
+    final List<dynamic> data = json.decode(response);
+
+    // Convert the data into a map
+    for (var currency in data) {
+      String name = currency['name'];
+      double rate = currency['rate'];
+      conversionRates[name] = rate;
+    }
+
+    // Ensure default currencies are set if they exist in the data
+    if (conversionRates.containsKey(selectedFromCurrency) &&
+        conversionRates.containsKey(selectedToCurrency)) {
+      _updateConvertedAmount(); // Update the conversion amount
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -159,10 +152,11 @@ class _ConverterScreenState extends State<ConverterScreen> {
 
     // Get the conversion rate from the selected currencies
     if (conversionRates.containsKey(selectedFromCurrency) &&
-        conversionRates[selectedFromCurrency]!
-            .containsKey(selectedToCurrency)) {
-      conversionRate =
-          conversionRates[selectedFromCurrency]![selectedToCurrency]!;
+        conversionRates.containsKey(selectedToCurrency)) {
+      double fromRate = conversionRates[selectedFromCurrency]!;
+      double toRate = conversionRates[selectedToCurrency]!;
+
+      conversionRate = toRate / fromRate; // Update the conversion rate
     } else {
       conversionRate = 1.0; // Default to 1.0 if no rate is found
     }
