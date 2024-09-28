@@ -95,13 +95,28 @@ class _ConverterScreenState extends State<ConverterScreen> {
                   onPressed: () {
                     _showCurrencySelector(true);
                   },
-                  child: Text(selectedFromCurrency),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(
+                          Icons.arrow_drop_down), // Icon for currency selection
+                      SizedBox(width: 5), // Spacing between icon and text
+                      Text(selectedFromCurrency),
+                    ],
+                  ),
                   style: OutlinedButton.styleFrom(
                     side: BorderSide(
                         color: Colors.transparent), // Remove button border
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10),
                     ),
+                    padding: EdgeInsets.symmetric(
+                        vertical: 15,
+                        horizontal: 20), // Adjust padding for size
+                    minimumSize:
+                        Size(120, 70), // Set minimum size for the button
+                    backgroundColor:
+                        Colors.white, // Optional: Set a background color
                   ),
                 ),
               ],
@@ -124,13 +139,28 @@ class _ConverterScreenState extends State<ConverterScreen> {
                   onPressed: () {
                     _showCurrencySelector(false);
                   },
-                  child: Text(selectedToCurrency),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(
+                          Icons.arrow_drop_down), // Icon for currency selection
+                      SizedBox(width: 5), // Spacing between icon and text
+                      Text(selectedToCurrency),
+                    ],
+                  ),
                   style: OutlinedButton.styleFrom(
                     side: BorderSide(
                         color: Colors.transparent), // Remove button border
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10),
                     ),
+                    padding: EdgeInsets.symmetric(
+                        vertical: 15,
+                        horizontal: 20), // Adjust padding for size
+                    minimumSize:
+                        Size(120, 70), // Set minimum size for the button
+                    backgroundColor:
+                        Colors.white, // Optional: Set a background color
                   ),
                 ),
               ],
