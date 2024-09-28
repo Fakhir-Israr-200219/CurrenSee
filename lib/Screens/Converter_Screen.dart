@@ -96,6 +96,13 @@ class _ConverterScreenState extends State<ConverterScreen> {
                     _showCurrencySelector(true);
                   },
                   child: Text(selectedFromCurrency),
+                  style: OutlinedButton.styleFrom(
+                    side: BorderSide(
+                        color: Colors.transparent), // Remove button border
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                  ),
                 ),
               ],
             ),
@@ -118,6 +125,13 @@ class _ConverterScreenState extends State<ConverterScreen> {
                     _showCurrencySelector(false);
                   },
                   child: Text(selectedToCurrency),
+                  style: OutlinedButton.styleFrom(
+                    side: BorderSide(
+                        color: Colors.transparent), // Remove button border
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                  ),
                 ),
               ],
             ),
