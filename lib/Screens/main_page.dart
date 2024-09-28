@@ -1,7 +1,5 @@
 import 'package:currency_converter_app/Screens/Converter_Screen.dart';
 import 'package:currency_converter_app/Screens/CurrencyList.dart';
-import 'package:currency_converter_app/Screens/Login_screen.dart';
-import 'package:currency_converter_app/Screens/SingIn_screen.dart';
 import 'package:flutter/material.dart';
 
 class MainPage extends StatefulWidget {
@@ -14,9 +12,8 @@ class MainPage extends StatefulWidget {
 class _MainPageState extends State<MainPage> {
   final List<Widget> pages = [
     const ConverterScreen(),
-    CurrencyList(),
-    const LoginScreen(),
-    const SingIn(),
+    CurrencyList(onCurrencySelected: (String currency) {}),
+    // Placeholder, add your LoginScreen and SignIn when implemented
   ];
   int currentPage = 0;
 
@@ -33,33 +30,15 @@ class _MainPageState extends State<MainPage> {
         currentIndex: currentPage,
         items: [
           BottomNavigationBarItem(
-              backgroundColor: const Color.fromARGB(255, 15, 171, 255),
-              icon: Icon(
-                color: Colors.black26,
-                Icons.monetization_on,
-              ),
-              label: "Converter"),
+            backgroundColor: Color.fromARGB(255, 15, 171, 255),
+            icon: Icon(Icons.monetization_on, color: Colors.black26),
+            label: "Converter",
+          ),
           BottomNavigationBarItem(
-              backgroundColor: const Color.fromARGB(255, 15, 171, 255),
-              icon: Icon(
-                color: Colors.black26,
-                Icons.monetization_on,
-              ),
-              label: "Currencies"),
-          BottomNavigationBarItem(
-              backgroundColor: const Color.fromARGB(255, 15, 171, 255),
-              icon: Icon(
-                color: Colors.black26,
-                Icons.monetization_on,
-              ),
-              label: "History"),
-          BottomNavigationBarItem(
-              backgroundColor: const Color.fromARGB(255, 15, 171, 255),
-              icon: Icon(
-                color: Colors.black26,
-                Icons.monetization_on,
-              ),
-              label: "User"),
+            backgroundColor: Color.fromARGB(255, 15, 171, 255),
+            icon: Icon(Icons.monetization_on, color: Colors.black26),
+            label: "Currencies",
+          ),
         ],
       ),
     );
