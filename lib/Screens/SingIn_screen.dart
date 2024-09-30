@@ -44,6 +44,16 @@ class _SingInState extends State<SingIn> {
                     TextField(
                       decoration: InputDecoration(
                           fillColor: Colors.grey.shade100,
+                          hintText: "UserName",
+                          border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(10))),
+                    ),
+                    SizedBox(
+                      height: 30,
+                    ),
+                    TextField(
+                      decoration: InputDecoration(
+                          fillColor: Colors.grey.shade100,
                           hintText: "Email",
                           border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(10))),
@@ -77,7 +87,9 @@ class _SingInState extends State<SingIn> {
                           backgroundColor: Color(0xff4c505c),
                           child: IconButton(
                               color: Colors.white,
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.pushNamed(context, "login");
+                              },
                               icon: Icon(Icons.arrow_forward)),
                         ),
                       ],
@@ -89,20 +101,11 @@ class _SingInState extends State<SingIn> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         TextButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.pushNamed(context, 'login');
+                          },
                           child: Text(
-                            "Sing up",
-                            style: TextStyle(
-                              decoration: TextDecoration.underline,
-                              fontSize: 18,
-                              color: Color(0xff4c505c),
-                            ),
-                          ),
-                        ),
-                        TextButton(
-                          onPressed: () {},
-                          child: Text(
-                            "Forget Password",
+                            "Login",
                             style: TextStyle(
                               decoration: TextDecoration.underline,
                               fontSize: 18,

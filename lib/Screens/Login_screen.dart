@@ -66,7 +66,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          "Sing In",
+                          "Login",
                           style: TextStyle(
                               color: Color(0xff4c505c),
                               fontSize: 27,
@@ -79,7 +79,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             color: Colors.white,
                             onPressed: () {
                               Navigator.pushNamed(context,
-                                  'signIn'); // Ensure the route is defined in your MaterialApp
+                                  'maniPage'); // Ensure the route is defined in your MaterialApp
                             },
                             icon: Icon(Icons.arrow_forward),
                           ),
@@ -93,7 +93,9 @@ class _LoginScreenState extends State<LoginScreen> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         TextButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.pushNamed(context, 'signIn');
+                          },
                           child: Text(
                             "Sing up",
                             style: TextStyle(

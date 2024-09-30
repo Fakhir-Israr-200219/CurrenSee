@@ -6,21 +6,35 @@ import 'package:flutter/material.dart';
 
 import 'Screens/CurrencyList.dart';
 
+// void main() {
+//   runApp(
+//     MaterialApp(
+//       debugShowCheckedModeBanner: false,
+//       title: "Flutter currency app",
+//       home: MainPage(),
+
+//       // bcz we use buttom navigation here
+//       // initialRoute: 'ConverterPage',
+//       // routes: {
+//       //   'login': (context) => LoginScreen(),
+//       //   'singIn': (context) => SingIn(),
+//       //   'currencyList': (context) => CurrencyList(),
+//       //   'ConverterPage': (context) => ConverterScreen(),
+//       // },
+//     ),
+//   );
+// }
+
 void main() {
   runApp(
     MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: "Flutter currency app",
-      home: MainPage(),
-
-      // bcz we use buttom navigation here
-      // initialRoute: 'ConverterPage',
-      // routes: {
-      //   'login': (context) => LoginScreen(),
-      //   'singIn': (context) => SingIn(),
-      //   'currencyList': (context) => CurrencyList(),
-      //   'ConverterPage': (context) => ConverterScreen(),
-      // },
+      initialRoute: 'login',
+      routes: {
+        'login': (context) => LoginScreen(),
+        'signIn': (context) => SingIn(),
+        'maniPage': (context) => MainPage(),
+      },
     ),
   );
 }
